@@ -1,6 +1,6 @@
 # Truth or Lie
 
-*A one-day psychological narrative game about interrogation, deception, and control.*
+*A psychological narrative game about interrogation, deception, and control.*
 
 ---
 
@@ -44,8 +44,8 @@ Your decisions define which side you stand on — and which side consumes you.
 
 ## Development
 
-- **Engine:** Unity  
-- **Language:** C#  
+- **Engine:** Godot  
+- **Language:** GDScript  
 - **Genre:** Psychological / Narrative / Mystery  
 - **Scope:** Created in 24 hours for a Game Jam  
 - **Core Mechanic:** Truth–Lie judgment system tied to player stability  
