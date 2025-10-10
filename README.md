@@ -16,8 +16,7 @@ No witnesses. No motive. Just a shattered camera and one suspect — **Marcus Th
 You’re here to break him.
 
 Every question you ask, every judgment you make — **Truth** or **Lie** — shifts the balance of control.  
-Expose his lies, and justice sharpens its blade.  
-Fail, and the narrative slips from your hands. The walls close in.  
+Expose his lies, and justice sharpens its blade.
 In the end, the truth might not be his at all.
 
 The interrogation begins now.
@@ -36,8 +35,7 @@ Your decisions define which side you stand on — and which side consumes you.
 ## Gameplay
 
 - Interrogate the suspect using a structured list of questions.  
-- Choose whether each response is **Truth** or **Lie**.  
-- Atmosphere reacts dynamically — lights flicker, sound distorts, tone darkens.  
+- Choose whether each response is **Truth** or **Lie**.
 - The game tracks your accuracy and composure. 
 
 ---
