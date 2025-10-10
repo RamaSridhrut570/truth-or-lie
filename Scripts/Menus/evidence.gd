@@ -1,10 +1,10 @@
 extends Control
 
 @onready var margin_container: MarginContainer = $MarginContainer
+@onready var label: Label = $MarginContainer/Panel/GridContainer/VScrollBar/Label
 
 ## Buttons
-@onready var resume: Button = $MarginContainer/Panel/GridContainer/VBoxContainer/RESUME
-@onready var exit_to_menu: Button = $MarginContainer/Panel/GridContainer/VBoxContainer/EXIT_TO_MENU
+@onready var resume: Button = $MarginContainer/Panel/GridContainer/RESUME
 @onready var sfx: AudioStreamPlayer = $SFX
 
 ## Preload Scenes
@@ -35,9 +35,9 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel") and not is_paused:
+	if event.is_action_pressed("evidence") and not is_paused:
 		_pause()
-	elif event.is_action_pressed("ui_cancel") and is_paused:
+	elif event.is_action_pressed("evidence") and is_paused:
 		_resumed()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -67,33 +67,7 @@ func _on_resume_pressed() -> void:
 
 
 
-
-func _on_exit_to_menu_pressed() -> void:
-	randomize()
-	var p = randf_range(1, 1.4)
-	sfx.stream = COMPUTER_MOUSE_CLICK
-	sfx.pitch_scale = p
-	sfx.play()
-	await get_tree().create_timer(0.4).timeout
-	_tween_disappear()
-	get_tree().paused = false
-	is_paused = false
-	await get_tree().create_timer(0.4).timeout
-	get_tree().change_scene_to_file("res://Scenes/Menus/main_menu.tscn")
-	# release focus so the Exit-to-Menu button doesn't retain focus
-	exit_to_menu.release_focus()
-
-
-
 func _on_resume_mouse_entered() -> void:
-	randomize()
-	sfx.stream = GLASS_006
-	var p = randf_range(1, 1.4)
-	sfx.pitch_scale = p
-	sfx.play()
-
-
-func _on_exit_to_menu_mouse_entered() -> void:
 	randomize()
 	sfx.stream = GLASS_006
 	var p = randf_range(1, 1.4)

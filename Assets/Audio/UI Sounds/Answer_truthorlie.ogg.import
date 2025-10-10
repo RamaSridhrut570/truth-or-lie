@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://hmur04yo6rm5"
+path="res://.godot/imported/Answer_truthorlie.ogg-231baf25a974d84ae849968b4180e763.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/UI Sounds/Answer_truthorlie.ogg"
+dest_files=["res://.godot/imported/Answer_truthorlie.ogg-231baf25a974d84ae849968b4180e763.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

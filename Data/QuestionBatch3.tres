@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="QuestionBatch" load_steps=7 format=3 uid="uid://080xpikl8drh"]
+
+[ext_resource type="Script" uid="uid://dqwx3wccqbxub" path="res://Scripts/Resources/Question.gd" id="1_k5hxt"]
+[ext_resource type="Script" uid="uid://du0k6v5l7rs5s" path="res://Scripts/Resources/QuestionBatch.gd" id="2_nhir8"]
+
+[sub_resource type="Resource" id="Resource_n3tj2"]
+script = ExtResource("1_k5hxt")
+text = "The victim was struck over ten times with a metal pipe. What does that tell you?"
+Answer = "Maybe it was self-defense. Guy fought back and things got messy."
+answer_is_truth = false
+metadata/_custom_type_script = "uid://dqwx3wccqbxub"
+
+[sub_resource type="Resource" id="Resource_m6ufo"]
+script = ExtResource("1_k5hxt")
+text = "There was no forced entry into the apartment. He knew this killer, didn't you visit him that night? "
+Answer = "Looks that way. You don’t let strangers in at night."
+metadata/_custom_type_script = "uid://dqwx3wccqbxub"
+
+[sub_resource type="Resource" id="Resource_nbveo"]
+script = ExtResource("1_k5hxt")
+text = "His camera and laptop were smashed to pieces. Why?"
+Answer = "I don't know! I was not there."
+metadata/_custom_type_script = "uid://dqwx3wccqbxub"
+
+[sub_resource type="Resource" id="Resource_2n1lu"]
+script = ExtResource("1_k5hxt")
+text = "Do you have short temper?"
+Answer = "No, I don't! I rarely get angry on people. You can ask my assistant."
+answer_is_truth = false
+metadata/_custom_type_script = "uid://dqwx3wccqbxub"
+
+[resource]
+script = ExtResource("2_nhir8")
+batch_name = "Timeline & Alibi"
+questions = Array[ExtResource("1_k5hxt")]([SubResource("Resource_n3tj2"), SubResource("Resource_m6ufo"), SubResource("Resource_nbveo"), SubResource("Resource_2n1lu")])
+is_unlocked = false
+metadata/_custom_type_script = "uid://du0k6v5l7rs5s"
