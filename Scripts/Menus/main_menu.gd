@@ -20,6 +20,7 @@ extends Control
 const GLASS_006 = preload("uid://e5lufvandqqs")
 const COMPUTER_MOUSE_CLICK = preload("uid://oetn681ypdq3")
 const MECH_KEYBOARD = preload("uid://c3kon1cdjkdg5")
+const CONUNDRUM_TRUTH_OR_LIE_OST = preload("uid://y85gkye53hsx")
 
 ## Typewriter Effect ##
 @export var typing_speed: float = 0.05 # Time in seconds between each character
@@ -30,6 +31,8 @@ var is_typing: bool = false
 
 func _ready() -> void:
 	instructions_panel.hide()
+	music.stream = CONUNDRUM_TRUTH_OR_LIE_OST
+	music.play()
 
 
 func _input(event: InputEvent) -> void:

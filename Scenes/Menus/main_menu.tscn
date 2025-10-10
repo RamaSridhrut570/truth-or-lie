@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://btyyar3txrbaq"]
+[gd_scene load_steps=15 format=3 uid="uid://btyyar3txrbaq"]
 
 [ext_resource type="FontFile" uid="uid://cfibd5cg4tolo" path="res://Assets/UI/Fonts/PressStart2P-Regular.ttf" id="1_1ehe0"]
 [ext_resource type="Script" uid="uid://n2xqbl7ogqlx" path="res://Scripts/Menus/main_menu.gd" id="1_ce3w2"]
+[ext_resource type="AudioStream" uid="uid://y85gkye53hsx" path="res://Assets/Audio/Songs/Conundrum - Truth Or Lie OST.mp3" id="5_5wi6m"]
 [ext_resource type="PackedScene" uid="uid://sbxcg0lk81cs" path="res://Scenes/Menus/instructions_panel.tscn" id="5_cp0ys"]
 [ext_resource type="AudioStream" uid="uid://e5lufvandqqs" path="res://Assets/Audio/UI Sounds/glass_006.ogg" id="5_n45e2"]
 
@@ -176,7 +177,11 @@ layout_mode = 1
 stream = ExtResource("5_n45e2")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_5wi6m")
+pitch_scale = 0.6
 autoplay = true
+bus = &"Music"
+parameters/looping = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

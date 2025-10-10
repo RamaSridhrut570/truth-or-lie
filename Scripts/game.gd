@@ -23,6 +23,7 @@ const LOW_ENDING = preload("uid://cylhfxbaawwci")
 @onready var truth_sound: AudioStreamPlayer2D = $Truth_Sound
 @onready var lie_sound: AudioStreamPlayer2D = $Lie_Sound
 @onready var evidence_screen: Control = $MainCanvasLayer/MarginContainer/Evidence_Screen
+@onready var music: AudioStreamPlayer = $Music
 
 ## Top Bar UI Nodes ##
 @onready var pause_button: Button = $MainCanvasLayer/MarginContainer/AllElementsContainer/TopBarContainer/Pause_Button
@@ -63,6 +64,7 @@ var typewriter_label: Label = null
 var typewriter_full_text: String = ""
 var is_typing: bool = false
 
+var original_pitch: float = 1.2
 
 func _ready() -> void:
 	_reset_all_batches_to_default()
@@ -251,9 +253,11 @@ func _check_batch_completion() -> void:
 			current_batch.is_unlocked = false
 			var next_batch = Question_Batches_Array[current_batch_index + 1]
 			next_batch.is_unlocked = true
+			music.pitch_scale -= 0.1 
 			_load_current_batch()
 			_display_available_questions()
 		else:
+			music.pitch_scale -= 0.6
 			if total_questions_answered > 0:
 				var accuracy_percentage = (float(correct_answers) / total_questions_answered) * 100.0
 				if total_questions_answered > 9:

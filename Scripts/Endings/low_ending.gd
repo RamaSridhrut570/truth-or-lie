@@ -3,6 +3,7 @@ extends Control
 @onready var label: Label = $MarginContainer/Label
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var dialogues: AudioStreamPlayer = $Dialogues
+@onready var music: AudioStreamPlayer = $Music
 
 const LOW_ENDING = preload("uid://csq86tsqwwhy7")
 const MAIN_MENU = preload("uid://btyyar3txrbaq")
@@ -11,7 +12,7 @@ const MAIN_MENU = preload("uid://btyyar3txrbaq")
 func _ready() -> void:
 	dialogues.stream = LOW_ENDING
 	dialogues.play()
-
+	music.pitch_scale = 0.6
 
 func _process(delta: float) -> void:
 	pass

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://y85gkye53hsx"
+path="res://.godot/imported/Conundrum - Truth Or Lie OST.mp3-e20db924a13011ad30a86e3cf60aa1bd.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Songs/Conundrum - Truth Or Lie OST.mp3"
+dest_files=["res://.godot/imported/Conundrum - Truth Or Lie OST.mp3-e20db924a13011ad30a86e3cf60aa1bd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
