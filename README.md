@@ -48,6 +48,7 @@ Your decisions define which side you stand on — and which side consumes you.
 - **Language:** GDScript  
 - **Genre:** Psychological / Narrative / Mystery  
 - **Scope:** Created in 24 hours for a Game Jam  
-- **Core Mechanic:** Truth–Lie judgment system tied to player stability  
+- **Core Mechanic:** Truth–Lie judgment system tied to player stability
+- **Assets Used:** Sound effects from Kenney Assets and Pixabay royaly free assets. Font from Google fonts. Everything else is made by me.
 
 ---
