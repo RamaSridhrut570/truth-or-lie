@@ -1,8 +1,8 @@
 [gd_scene load_steps=45 format=4 uid="uid://c863etmtcokno"]
 
 [ext_resource type="FontFile" uid="uid://cfibd5cg4tolo" path="res://Assets/UI/Fonts/PressStart2P-Regular.ttf" id="1_ebmjs"]
-[ext_resource type="Script" uid="uid://c2ea4lnb0rdr5" path="res://Scripts/game.gd" id="1_qxrlw"]
-[ext_resource type="Script" uid="uid://du0k6v5l7rs5s" path="res://Scripts/Resources/QuestionBatch.gd" id="2_h4fw4"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_qxrlw"]
+[ext_resource type="Script" path="res://Scripts/Resources/QuestionBatch.gd" id="2_h4fw4"]
 [ext_resource type="Resource" uid="uid://bjobvf2o6klh1" path="res://Data/QuestionBatch1.tres" id="3_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://bouudvr6hv2y7" path="res://Scenes/Menus/pause_menu.tscn" id="3_wrm1d"]
 [ext_resource type="AudioStream" uid="uid://e5lufvandqqs" path="res://Assets/Audio/UI Sounds/glass_006.ogg" id="4_3dryh"]
@@ -22,7 +22,7 @@ corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxrlw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1d"]
@@ -37,7 +37,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxrlw"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Image" id="Image_wowpa"]
@@ -249,7 +249,7 @@ cache/0/16/0/glyphs/86/uv_rect = Rect2(103, 33, 16, 16)
 cache/0/16/0/glyphs/86/texture_idx = 0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(482, 0, 30, 46, 172, 46, 340, 46)
@@ -336,7 +336,7 @@ cache/0/48/0/glyphs/145/uv_rect = Rect2(127, 47, 44, 32)
 cache/0/48/0/glyphs/145/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(216, 0, 40, 32)
@@ -645,7 +645,7 @@ cache/0/9/0/glyphs/155/texture_idx = 0
 cache/0/36/0/ascent = 36.0
 cache/0/36/0/descent = 0.0
 cache/0/36/0/underline_position = 3.59375
-cache/0/36/0/underline_thickness = 1.796875
+cache/0/36/0/underline_thickness = 1.79688
 cache/0/36/0/scale = 1.0
 cache/0/36/0/textures/0/offsets = PackedInt32Array(380, 0, 132, 35)
 cache/0/36/0/textures/0/image = SubResource("Image_v158k")
@@ -887,7 +887,7 @@ cache/0/16/0/glyphs/86/uv_rect = Rect2(103, 33, 16, 16)
 cache/0/16/0/glyphs/86/texture_idx = 0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(482, 0, 30, 46, 172, 46, 340, 46)
@@ -974,7 +974,7 @@ cache/0/48/0/glyphs/145/uv_rect = Rect2(127, 47, 44, 32)
 cache/0/48/0/glyphs/145/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(248, 0, 8, 32, 160, 32, 96, 24, 56, 56, 200, 32)
@@ -1328,7 +1328,7 @@ cache/0/9/0/glyphs/155/texture_idx = 0
 cache/0/36/0/ascent = 36.0
 cache/0/36/0/descent = 0.0
 cache/0/36/0/underline_position = 3.59375
-cache/0/36/0/underline_thickness = 1.796875
+cache/0/36/0/underline_thickness = 1.79688
 cache/0/36/0/scale = 1.0
 cache/0/36/0/textures/0/offsets = PackedInt32Array(488, 0, 24, 35)
 cache/0/36/0/textures/0/image = SubResource("Image_v158k")
@@ -1410,7 +1410,7 @@ cache/0/36/0/glyphs/211/texture_idx = 0
 cache/0/24/0/ascent = 24.0
 cache/0/24/0/descent = 0.0
 cache/0/24/0/underline_position = 2.40625
-cache/0/24/0/underline_thickness = 1.203125
+cache/0/24/0/underline_thickness = 1.20313
 cache/0/24/0/scale = 1.0
 cache/0/24/0/textures/0/offsets = PackedInt32Array(194, 0, 62, 25)
 cache/0/24/0/textures/0/image = SubResource("Image_rfjv2")
@@ -1513,7 +1513,7 @@ cache/0/30/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
 cache/0/30/0/glyphs/3/texture_idx = -1
 cache/0/27/0/ascent = 27.0
 cache/0/27/0/descent = 0.0
-cache/0/27/0/underline_position = 2.703125
+cache/0/27/0/underline_position = 2.70313
 cache/0/27/0/underline_thickness = 1.34375
 cache/0/27/0/scale = 1.0
 cache/0/27/0/textures/0/offsets = PackedInt32Array(218, 0, 38, 28)
@@ -1744,7 +1744,7 @@ cache/0/16/0/glyphs/531/uv_rect = Rect2(71, 19, 6, 6)
 cache/0/16/0/glyphs/531/texture_idx = 0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(482, 0, 30, 46, 172, 46, 340, 46)
@@ -1831,7 +1831,7 @@ cache/0/48/0/glyphs/145/uv_rect = Rect2(127, 47, 44, 32)
 cache/0/48/0/glyphs/145/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(244, 0, 12, 32, 252, 32, 4, 24, 76, 56, 180, 28, 148, 84, 108, 32)
@@ -2235,7 +2235,7 @@ cache/0/9/0/glyphs/155/texture_idx = 0
 cache/0/36/0/ascent = 36.0
 cache/0/36/0/descent = 0.0
 cache/0/36/0/underline_position = 3.59375
-cache/0/36/0/underline_thickness = 1.796875
+cache/0/36/0/underline_thickness = 1.79688
 cache/0/36/0/scale = 1.0
 cache/0/36/0/textures/0/offsets = PackedInt32Array(380, 0, 132, 35)
 cache/0/36/0/textures/0/image = SubResource("Image_v158k")
@@ -2302,7 +2302,7 @@ cache/0/36/0/glyphs/186/texture_idx = 0
 cache/0/24/0/ascent = 24.0
 cache/0/24/0/descent = 0.0
 cache/0/24/0/underline_position = 2.40625
-cache/0/24/0/underline_thickness = 1.203125
+cache/0/24/0/underline_thickness = 1.20313
 cache/0/24/0/scale = 1.0
 cache/0/24/0/textures/0/offsets = PackedInt32Array(238, 0, 18, 25, 85, 25, 171, 19, 97, 44, 159, 25)
 cache/0/24/0/textures/0/image = SubResource("Image_rku1e")
@@ -2407,7 +2407,7 @@ line_spacing = 25.0
 font = SubResource("FontFile_qxrlw")
 font_size = 24
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wowpa"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1l0tm"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6g32"]
@@ -2422,7 +2422,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1l0tm"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wowpa"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v158k"]
@@ -2615,7 +2615,7 @@ cache/0/16/0/glyphs/100/uv_rect = Rect2(173, 33, 16, 16)
 cache/0/16/0/glyphs/100/texture_idx = 0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(482, 0, 30, 46, 172, 46, 340, 46)
@@ -2702,7 +2702,7 @@ cache/0/48/0/glyphs/145/uv_rect = Rect2(127, 47, 44, 32)
 cache/0/48/0/glyphs/145/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(248, 0, 8, 32, 32, 32, 224, 32)
@@ -3026,7 +3026,7 @@ cache/0/9/0/glyphs/155/texture_idx = 0
 cache/0/36/0/ascent = 36.0
 cache/0/36/0/descent = 0.0
 cache/0/36/0/underline_position = 3.59375
-cache/0/36/0/underline_thickness = 1.796875
+cache/0/36/0/underline_thickness = 1.79688
 cache/0/36/0/scale = 1.0
 cache/0/36/0/textures/0/offsets = PackedInt32Array(380, 0, 132, 35)
 cache/0/36/0/textures/0/image = SubResource("Image_v158k")
@@ -3299,7 +3299,7 @@ cache/0/16/0/glyphs/100/uv_rect = Rect2(173, 33, 16, 16)
 cache/0/16/0/glyphs/100/texture_idx = 0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(482, 0, 30, 46, 172, 46, 340, 46)
@@ -3386,7 +3386,7 @@ cache/0/48/0/glyphs/145/uv_rect = Rect2(127, 47, 44, 32)
 cache/0/48/0/glyphs/145/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(216, 0, 40, 32)
@@ -3695,7 +3695,7 @@ cache/0/9/0/glyphs/155/texture_idx = 0
 cache/0/36/0/ascent = 36.0
 cache/0/36/0/descent = 0.0
 cache/0/36/0/underline_position = 3.59375
-cache/0/36/0/underline_thickness = 1.796875
+cache/0/36/0/underline_thickness = 1.79688
 cache/0/36/0/scale = 1.0
 cache/0/36/0/textures/0/offsets = PackedInt32Array(380, 0, 132, 35)
 cache/0/36/0/textures/0/image = SubResource("Image_v158k")
@@ -3964,7 +3964,7 @@ cache/0/16/0/glyphs/60/uv_rect = Rect2(209, 33, 14, 16)
 cache/0/16/0/glyphs/60/texture_idx = 0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(482, 0, 30, 46, 172, 46, 340, 46)
@@ -4051,7 +4051,7 @@ cache/0/48/0/glyphs/145/uv_rect = Rect2(127, 47, 44, 32)
 cache/0/48/0/glyphs/145/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(244, 0, 12, 32)
@@ -4370,7 +4370,7 @@ cache/0/9/0/glyphs/155/texture_idx = 0
 cache/0/36/0/ascent = 36.0
 cache/0/36/0/descent = 0.0
 cache/0/36/0/underline_position = 3.59375
-cache/0/36/0/underline_thickness = 1.796875
+cache/0/36/0/underline_thickness = 1.79688
 cache/0/36/0/scale = 1.0
 cache/0/36/0/textures/0/offsets = PackedInt32Array(448, 0, 64, 35)
 cache/0/36/0/textures/0/image = SubResource("Image_v158k")
@@ -4530,9 +4530,9 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ebmjs")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/focus = SubResource("StyleBoxFlat_3dryh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wrm1d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
 text = "	||	"
 
 [node name="Instruction_Label" type="Label" parent="MainCanvasLayer/MarginContainer/AllElementsContainer/TopBarContainer"]
@@ -4551,9 +4551,9 @@ custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_ebmjs")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/focus = SubResource("StyleBoxFlat_3dryh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wrm1d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
 text = "E"
 autowrap_mode = 2
 
@@ -4622,9 +4622,9 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ebmjs")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_wowpa")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i6g32")
 theme_override_styles/focus = SubResource("StyleBoxFlat_1l0tm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i6g32")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wowpa")
 text = "ASK"
 
 [node name="SelectionContainer" type="MarginContainer" parent="MainCanvasLayer/MarginContainer"]
@@ -4740,9 +4740,9 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_ebmjs")
 theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_wowpa")
-theme_override_styles/hover = SubResource("StyleBoxFlat_i6g32")
 theme_override_styles/focus = SubResource("StyleBoxFlat_1l0tm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i6g32")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wowpa")
 text = "CANCEL"
 
 [node name="Evidence_Screen" parent="MainCanvasLayer/MarginContainer" instance=ExtResource("7_h4fw4")]

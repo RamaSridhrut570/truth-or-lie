@@ -1,29 +1,40 @@
 [gd_resource type="Resource" script_class="QuestionBatch" load_steps=7 format=3 uid="uid://ds7jxr52a6sxl"]
 
-[ext_resource type="Script" uid="uid://dqwx3wccqbxub" path="res://Scripts/Resources/Question.gd" id="1_6vb4c"]
-[ext_resource type="Script" uid="uid://du0k6v5l7rs5s" path="res://Scripts/Resources/QuestionBatch.gd" id="2_h7rbo"]
+[ext_resource type="Script" path="res://Scripts/Resources/Question.gd" id="1_6vb4c"]
+[ext_resource type="Script" path="res://Scripts/Resources/QuestionBatch.gd" id="2_h7rbo"]
 
 [sub_resource type="Resource" id="Resource_n3tj2"]
 script = ExtResource("1_6vb4c")
 text = "Where were you on the evening of May 2nd?"
+is_asked = false
+should_be_asked = true
 Answer = "At the garage, finishing up a customer’s car. Left around ten."
+answer_is_truth = true
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 
 [sub_resource type="Resource" id="Resource_m6ufo"]
 script = ExtResource("1_6vb4c")
 text = "The building has poor security. Did you notice anyone entering?"
+is_asked = false
+should_be_asked = true
 Answer = "Saw a tall man in a dark coat go in earlier that evening."
+answer_is_truth = true
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 
 [sub_resource type="Resource" id="Resource_nbveo"]
 script = ExtResource("1_6vb4c")
 text = "Can anyone confirm your whereabouts?"
+is_asked = false
+should_be_asked = true
 Answer = "No, I was alone. Didn’t think I’d need an alibi."
+answer_is_truth = true
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 
 [sub_resource type="Resource" id="Resource_2n1lu"]
 script = ExtResource("1_6vb4c")
 text = "Did you see or hear anything unusual that night?"
+is_asked = false
+should_be_asked = true
 Answer = "Nothing at all. It was quiet."
 answer_is_truth = false
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"

@@ -1,17 +1,22 @@
 [gd_resource type="Resource" script_class="QuestionBatch" load_steps=7 format=3 uid="uid://bjobvf2o6klh1"]
 
-[ext_resource type="Script" uid="uid://dqwx3wccqbxub" path="res://Scripts/Resources/Question.gd" id="1_n3tj2"]
-[ext_resource type="Script" uid="uid://du0k6v5l7rs5s" path="res://Scripts/Resources/QuestionBatch.gd" id="2_m6ufo"]
+[ext_resource type="Script" path="res://Scripts/Resources/Question.gd" id="1_n3tj2"]
+[ext_resource type="Script" path="res://Scripts/Resources/QuestionBatch.gd" id="2_m6ufo"]
 
 [sub_resource type="Resource" id="Resource_n3tj2"]
 script = ExtResource("1_n3tj2")
 text = "State your full name and occupation for the record."
+is_asked = false
+should_be_asked = true
 Answer = "Marcus Thorne. Freelance mechanic. Mostly work out of my garage down on Hill Street."
+answer_is_truth = true
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 
 [sub_resource type="Resource" id="Resource_m6ufo"]
 script = ExtResource("1_n3tj2")
 text = "How long have you lived in the Claymore area?"
+is_asked = false
+should_be_asked = true
 Answer = "Just a few months. Still getting used to the neighborhood."
 answer_is_truth = false
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
@@ -19,6 +24,8 @@ metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 [sub_resource type="Resource" id="Resource_2n1lu"]
 script = ExtResource("1_n3tj2")
 text = "Were you acquainted with the victim?"
+is_asked = false
+should_be_asked = true
 Answer = "Never met him. Just seen him around maybe."
 answer_is_truth = false
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
@@ -26,11 +33,15 @@ metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 [sub_resource type="Resource" id="Resource_v0mdk"]
 script = ExtResource("1_n3tj2")
 text = "When was the last time you saw him?"
+is_asked = false
+should_be_asked = true
 Answer = "Couple of days before he died. He stopped by, said his car was acting."
+answer_is_truth = true
 metadata/_custom_type_script = "uid://dqwx3wccqbxub"
 
 [resource]
 script = ExtResource("2_m6ufo")
 batch_name = "Background Info"
 questions = Array[ExtResource("1_n3tj2")]([SubResource("Resource_n3tj2"), SubResource("Resource_m6ufo"), SubResource("Resource_2n1lu"), SubResource("Resource_v0mdk")])
+is_unlocked = true
 metadata/_custom_type_script = "uid://du0k6v5l7rs5s"

@@ -5,6 +5,7 @@ const COMPUTER_MOUSE_CLICK = preload("uid://oetn681ypdq3")
 const ANSWER_TRUTHORLIE = preload("uid://hmur04yo6rm5")
 const MECH_KEYBOARD = preload("uid://c3kon1cdjkdg5")
 const LOW_ENDING = preload("uid://cylhfxbaawwci")
+const ENDING_SCENE_PATH := "res://Scenes/Endings/low_ending.tscn"
 
 
 ## Question Batches ##
@@ -58,6 +59,10 @@ var current_question: Question
 var available_questions: Array[Question] = []
 var correct_answers: int = 0
 var total_questions_answered: int = 0
+var mistake_count: int = 0
+var pressure_level: int = 0
+var flawless_streak: int = 0
+var previous_accuracy_percentage: float = 0.0
 
 ## Typewriter State ##
 var typewriter_label: Label = null
@@ -68,6 +73,8 @@ var original_pitch: float = 1.2
 
 func _ready() -> void:
 	_reset_all_batches_to_default()
+	original_pitch = music.pitch_scale
+	previous_accuracy_percentage = 0.0
 	selection_container.hide()
 	if not ask_button.is_connected("pressed", _on_ask_button_pressed):
 		ask_button.connect("pressed", _on_ask_button_pressed)
@@ -78,7 +85,7 @@ func _ready() -> void:
 	_display_available_questions()
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if is_selecting or is_typing:
 		ask_button.disabled = true
 		return
@@ -233,9 +240,20 @@ func _display_available_questions() -> void:
 
 func _handle_player_judgment(player_choice_is_truth: bool) -> void:
 	total_questions_answered += 1
-	
-	if player_choice_is_truth == current_question.answer_is_truth:
+	var was_correct := player_choice_is_truth == current_question.answer_is_truth
+
+	if was_correct:
 		correct_answers += 1
+		flawless_streak += 1
+		if pressure_level > 0 and flawless_streak >= 2:
+			pressure_level -= 1
+	else:
+		mistake_count += 1
+		flawless_streak = 0
+		pressure_level = min(9, pressure_level + 2)
+
+	_update_music_pitch_from_accuracy()
+	_update_tension_feedback(was_correct)
 	
 	selection_container.hide()
 	is_selecting = false
@@ -253,30 +271,81 @@ func _check_batch_completion() -> void:
 			current_batch.is_unlocked = false
 			var next_batch = Question_Batches_Array[current_batch_index + 1]
 			next_batch.is_unlocked = true
-			music.pitch_scale -= 0.1 
 			_load_current_batch()
 			_display_available_questions()
 		else:
-			music.pitch_scale -= 0.6
 			if total_questions_answered > 0:
 				var accuracy_percentage = (float(correct_answers) / total_questions_answered) * 100.0
 				if total_questions_answered > 9:
 					_start_typewriter(instruction_label, "- You cannot do this")
-				if accuracy_percentage >= 70.0:
-					_trigger_high_accuracy_ending()
-				else:
-					_trigger_low_accuracy_ending()
+				_trigger_ending_for_results(accuracy_percentage)
+
+func _update_music_pitch_from_accuracy() -> void:
+	if total_questions_answered <= 0:
+		return
+
+	var accuracy_percentage := (float(correct_answers) / total_questions_answered) * 100.0
+	var accuracy_change := accuracy_percentage - previous_accuracy_percentage
+	previous_accuracy_percentage = accuracy_percentage
+
+	var pitch_step := accuracy_change * 0.005
+	music.pitch_scale = clamp(music.pitch_scale + pitch_step, 0.55, 1.45)
+
+func _update_tension_feedback(was_correct: bool) -> void:
+	if was_correct:
+		if pressure_level >= 6:
+			instruction_label.text = "Pressure easing... stay focused."
+		elif flawless_streak >= 3:
+			instruction_label.text = "You're in control of the room."
+	else:
+		if pressure_level >= 7:
+			instruction_label.text = "The case is slipping away."
+		else:
+			instruction_label.text = "Doubt creeps in."
+
+
+func _trigger_ending_for_results(accuracy_percentage: float) -> void:
+	var ending_key := _resolve_ending_key(accuracy_percentage)
+	var ending_payload := {
+		"ending_key": ending_key,
+		"accuracy": accuracy_percentage,
+		"correct": correct_answers,
+		"answered": total_questions_answered,
+		"mistakes": mistake_count,
+		"pressure": pressure_level
+	}
+	get_tree().set_meta("ending_payload", ending_payload)
+
+	if ending_key == "vindication":
+		_trigger_high_accuracy_ending()
+	elif ending_key == "uncertain":
+		_trigger_mixed_accuracy_ending()
+	else:
+		_trigger_low_accuracy_ending()
+
+
+func _resolve_ending_key(accuracy_percentage: float) -> String:
+	if accuracy_percentage >= 82.0 and pressure_level <= 3 and mistake_count <= 2:
+		return "vindication"
+	if accuracy_percentage >= 62.0 and pressure_level <= 6:
+		return "uncertain"
+	return "collapse"
 
 ## Ending Cutscene Triggers (Templates) ##
 func _trigger_high_accuracy_ending():
 	print("--- TRIGGERING HIGH ACCURACY ENDING ---")
-	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://Scenes/Endings/low_ending.tscn")
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file(ENDING_SCENE_PATH)
+
+func _trigger_mixed_accuracy_ending():
+	print("--- TRIGGERING MIXED ACCURACY ENDING ---")
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file(ENDING_SCENE_PATH)
 
 func _trigger_low_accuracy_ending():
 	print("--- TRIGGERING LOW ACCURACY ENDING ---")
-	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://Scenes/Endings/low_ending.tscn")
+	await get_tree().create_timer(1.5).timeout
+	get_tree().change_scene_to_file(ENDING_SCENE_PATH)
 	
 
 ## Signal Callbacks ##

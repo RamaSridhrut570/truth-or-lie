@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://btyyar3txrbaq"]
 
 [ext_resource type="FontFile" uid="uid://cfibd5cg4tolo" path="res://Assets/UI/Fonts/PressStart2P-Regular.ttf" id="1_1ehe0"]
-[ext_resource type="Script" uid="uid://n2xqbl7ogqlx" path="res://Scripts/Menus/main_menu.gd" id="1_ce3w2"]
+[ext_resource type="Script" path="res://Scripts/Menus/main_menu.gd" id="1_ce3w2"]
 [ext_resource type="AudioStream" uid="uid://y85gkye53hsx" path="res://Assets/Audio/Songs/Conundrum - Truth Or Lie OST.mp3" id="5_5wi6m"]
 [ext_resource type="PackedScene" uid="uid://sbxcg0lk81cs" path="res://Scenes/Menus/instructions_panel.tscn" id="5_cp0ys"]
 [ext_resource type="AudioStream" uid="uid://e5lufvandqqs" path="res://Assets/Audio/UI Sounds/glass_006.ogg" id="5_n45e2"]
@@ -27,7 +27,7 @@ animations = [{
 font = ExtResource("1_1ehe0")
 font_size = 48
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhxw7"]
@@ -42,7 +42,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Animation" id="Animation_opfnp"]
@@ -74,13 +74,13 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0.7294118, 0, 1)]
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0.729412, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cp0ys"]
 _data = {
-&"RESET": SubResource("Animation_opfnp"),
-&"start": SubResource("Animation_n45e2")
+"RESET": SubResource("Animation_opfnp"),
+"start": SubResource("Animation_n45e2")
 }
 
 [node name="Main_Menu" type="Control"]
@@ -126,7 +126,7 @@ size_flags_vertical = 4
 scale = Vector2(16, 16)
 sprite_frames = SubResource("SpriteFrames_16hvj")
 autoplay = "default"
-frame_progress = 0.1122626
+frame_progress = 0.112263
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(512, 0)
@@ -147,26 +147,26 @@ autowrap_mode = 2
 custom_minimum_size = Vector2(256, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1ehe0")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_trj04")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
 text = "START"
 
 [node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(256, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_1ehe0")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_trj04")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
 text = "EXIT"
 
 [node name="Instructions_Panel" parent="." instance=ExtResource("5_cp0ys")]
@@ -185,7 +185,7 @@ parameters/looping = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_cp0ys")
+"": SubResource("AnimationLibrary_cp0ys")
 }
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_mouse_entered"]

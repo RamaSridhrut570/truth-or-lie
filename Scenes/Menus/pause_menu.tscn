@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=4 uid="uid://bouudvr6hv2y7"]
 
 [ext_resource type="FontFile" uid="uid://cfibd5cg4tolo" path="res://Assets/UI/Fonts/PressStart2P-Regular.ttf" id="1_emv3i"]
-[ext_resource type="Script" uid="uid://dxajalpyaxyd3" path="res://Scripts/Menus/pause_menu.gd" id="1_k0w1u"]
+[ext_resource type="Script" path="res://Scripts/Menus/pause_menu.gd" id="1_k0w1u"]
 [ext_resource type="AudioStream" uid="uid://e5lufvandqqs" path="res://Assets/Audio/UI Sounds/glass_006.ogg" id="3_1och7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0w1u"]
@@ -97,6 +97,7 @@ font_name = "Press Start 2P"
 style_name = "Regular"
 subpixel_positioning = 0
 msdf_pixel_range = 8
+msdf_size = 128
 cache/0/16/0/ascent = 16.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 1.59375
@@ -104,7 +105,7 @@ cache/0/16/0/underline_thickness = 0.796875
 cache/0/16/0/scale = 1.0
 cache/0/48/0/ascent = 48.0
 cache/0/48/0/descent = 0.0
-cache/0/48/0/underline_position = 4.796875
+cache/0/48/0/underline_position = 4.79688
 cache/0/48/0/underline_thickness = 2.40625
 cache/0/48/0/scale = 1.0
 cache/0/48/0/textures/0/offsets = PackedInt32Array(476, 0, 36, 46, 276, 46, 236, 46)
@@ -201,7 +202,7 @@ cache/0/48/0/glyphs/22/uv_rect = Rect2(231, 47, 44, 44)
 cache/0/48/0/glyphs/22/texture_idx = 0
 cache/0/32/0/ascent = 32.0
 cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 3.203125
+cache/0/32/0/underline_position = 3.20313
 cache/0/32/0/underline_thickness = 1.59375
 cache/0/32/0/scale = 1.0
 cache/0/32/0/textures/0/offsets = PackedInt32Array(216, 0, 40, 32)
@@ -511,7 +512,7 @@ cache/0/25/0/glyphs/73/texture_idx = 0
 cache/0/24/0/ascent = 24.0
 cache/0/24/0/descent = 0.0
 cache/0/24/0/underline_position = 2.40625
-cache/0/24/0/underline_thickness = 1.203125
+cache/0/24/0/underline_thickness = 1.20313
 cache/0/24/0/scale = 1.0
 cache/0/24/0/textures/0/offsets = PackedInt32Array(172, 0, 84, 25)
 cache/0/24/0/textures/0/image = SubResource("Image_tf3q2")
@@ -553,7 +554,7 @@ cache/0/24/0/glyphs/60/texture_idx = 0
 cache/0/64/0/ascent = 64.0
 cache/0/64/0/descent = 0.0
 cache/0/64/0/underline_position = 6.40625
-cache/0/64/0/underline_thickness = 3.203125
+cache/0/64/0/underline_thickness = 3.20313
 cache/0/64/0/scale = 1.0
 cache/0/64/0/textures/0/offsets = PackedInt32Array(480, 0, 32, 60)
 cache/0/64/0/textures/0/image = SubResource("Image_cnjyl")
@@ -738,7 +739,7 @@ cache/0/25/9/glyphs/67/texture_idx = 0
 font = SubResource("FontFile_2cpnl")
 font_size = 64
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tf3q2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw12o"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeo1y"]
@@ -753,7 +754,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw12o"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tf3q2"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Pause_Menu" type="Control"]
@@ -819,14 +820,14 @@ alignment = 1
 custom_minimum_size = Vector2(400, 64)
 layout_mode = 2
 size_flags_horizontal = 6
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("1_emv3i")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_tf3q2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yeo1y")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pw12o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yeo1y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tf3q2")
 text = "RESUME
 "
 
@@ -834,14 +835,14 @@ text = "RESUME
 custom_minimum_size = Vector2(400, 64)
 layout_mode = 2
 size_flags_horizontal = 6
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("1_emv3i")
 theme_override_font_sizes/font_size = 25
-theme_override_styles/normal = SubResource("StyleBoxFlat_tf3q2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yeo1y")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pw12o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yeo1y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tf3q2")
 text = "EXIT TO MENU"
 
 [node name="SFX" type="AudioStreamPlayer" parent="."]

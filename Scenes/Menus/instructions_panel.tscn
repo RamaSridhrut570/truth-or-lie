@@ -19,7 +19,7 @@ line_spacing = 25.0
 font = ExtResource("1_mi80t")
 font_size = 25
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhxw7"]
@@ -34,7 +34,7 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Instructions_Panel" type="Panel"]
@@ -86,7 +86,7 @@ size_flags_vertical = 8
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_mi80t")
 theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
-theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
 theme_override_styles/focus = SubResource("StyleBoxFlat_trj04")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yhxw7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
 text = "START"
